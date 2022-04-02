@@ -1,3 +1,3 @@
 # exchange
 
-There is a project for users who has an account in some exchange brokers.
+Exchange is a private dividend investor's tool for the portfolio awareness. 
