@@ -1,0 +1,5 @@
+project:
+  name: Exchange
+  tz: Europe/Tallinn
+  adrFolder: ./docs/adr
+  packages: []
