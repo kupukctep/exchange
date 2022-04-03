@@ -9,7 +9,7 @@ class CashPage extends StatefulWidget {
 }
 
 class _CashPageState extends State<CashPage> {
-  final int _amount = 0;
+  int _amount = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +27,23 @@ class _CashPageState extends State<CashPage> {
                   children: [const Text("EUR"), Text("$_amount")],
                 ),
                 ElevatedButton(
-                    onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) => const DepositPage())),
+                    onPressed: () {
+                      _openAndAwaitDeposit(context);
+                    },
                     child: const Text("Deposit"))
               ],
             )));
+  }
+
+  void _openAndAwaitDeposit(BuildContext context) async {
+    final DepositFormValue result = await Navigator.push(
+        context,
+        MaterialPageRoute(
+        builder: (context) => const DepositPage())
+    );
+
+    setState(() {
+      _amount = _amount + result.amount;
+    });
   }
 }
