@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'pages/cash_page.dart';
 import 'pages/my_home_page.dart';
 
 void main() {
@@ -26,9 +27,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: '/cash',
       routes: {
         '/': (context) => const MyHomePage(),
+        '/cash': (context) => const CashPage(),
       },
     );
   }
