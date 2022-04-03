@@ -17,18 +17,21 @@ class _CashPageState extends State<CashPage> {
         appBar: AppBar(
           title: const Text("Cash"),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [const Text("EUR"), Text("$_amount")],
-            ),
-            ElevatedButton(
-                onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DepositPage())),
-                child: const Text("Deposit")
-              )
-          ],
-        ));
+        body: Container(
+            padding: const EdgeInsets.all(8),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [const Text("EUR"), Text("$_amount")],
+                ),
+                ElevatedButton(
+                    onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => const DepositPage())),
+                    child: const Text("Deposit"))
+              ],
+            )));
   }
 }
