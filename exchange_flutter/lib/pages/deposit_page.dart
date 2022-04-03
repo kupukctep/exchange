@@ -45,14 +45,16 @@ class _DepositPageState extends State<DepositPage> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: ElevatedButton(
-                    onPressed: () {
+                child: ElevatedButton.icon(
+                  icon: const Icon(Icons.add),
+                  label: const Text("Deposit"),
+                  onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         print("${value.amount} ${value.currency}");
                         Navigator.pop(context, value);
                       }
                     },
-                    child: const Text("Submit")),
+                ),
               ),
             ],
           ),
