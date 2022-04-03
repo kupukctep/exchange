@@ -40,7 +40,7 @@ class _DepositPageState extends State<DepositPage> {
                 keyboardType: TextInputType.number,
                 initialValue: "0",
                 decoration:
-                const InputDecoration(hintText: 'Enter deposit amount'),
+                    const InputDecoration(hintText: 'Enter deposit amount'),
                 onChanged: (v) => value.amount = int.tryParse(v) ?? 0,
               ),
               Padding(

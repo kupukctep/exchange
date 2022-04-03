@@ -37,13 +37,12 @@ class _CashPageState extends State<CashPage> {
 
   void _openAndAwaitDeposit(BuildContext context) async {
     final DepositFormValue? result = await Navigator.push(
-        context,
-        MaterialPageRoute(
-        builder: (context) => const DepositPage())
+      context,
+      MaterialPageRoute(builder: (context) => const DepositPage()),
     );
 
     setState(() {
-       var depositAmount = result?.amount ?? 0;
+      var depositAmount = result?.amount ?? 0;
       _amount = _amount + depositAmount;
     });
   }
