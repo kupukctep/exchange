@@ -18,7 +18,7 @@ class _CashPageState extends State<CashPage> {
           title: const Text("Cash"),
         ),
         body: Container(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
